@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Birthday Paradox</title>
+</head>
+<body>
+<div class="container">
+	<img src="potato.png" class="bgimg">
+	<div class="center-div">
+		<h1>BIRTHDAY PARADOX</h1>
+
+		<h2>Per quante persone vuoi calcolare la probabilita' che almeno due di queste condividano il giorno del compleanno?</h2>
+		<input type="text" id="numero" value="0">
+
+		<input type="button" id="myBtn" onclick="myFunction()" value="Calcola">
+
+		<p id="demo"></p>
+	</div>
+</div>
+
+
+<script>
+function myFunction() {
+	var y = document.getElementById("numero").value;
+	var prob=1;
+	var i;
+	if (y>365){
+		prob=0
+	}
+	else{
+		for(i=0; i<y; i++){
+			prob*= (365-i)/365
+		}
+	}
+	document.getElementById("demo").innerHTML = ((1-prob)*100).toFixed(2)+"%";
+}
+
+var input = document.getElementById("numero");
+input.addEventListener("keyup", function(event) {
+	event.preventDefault();
+	if (event.keyCode === 13) {
+		document.getElementById("myBtn").click();
+	}
+})
+</script>
+
+</body>
+</html>
