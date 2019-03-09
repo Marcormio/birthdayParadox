@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Birthday Paradox</title>
 	<audio id="audio1" src="plsdp.ogg"></audio>
+	<audio id="audio2" src="plsdp2.ogg"></audio>
 </head>
 <body>
 <div class="container">
@@ -18,8 +19,11 @@
 
 		<p id="demo"></p>
 
+		
 	</div>
-	<a id="play"  href="#" onClick="play()"><img src="maria.png"></a>
+	<div class="maria">
+		<a id="play" onClick="play()"><img width="200" height="280" src="maria.png"></a>
+	</div>
 </div>
 
 
@@ -48,7 +52,10 @@ input.addEventListener("keyup", function(event) {
 })
 
 function play(){
-	var audioElement = document.getElementById('audio1');
+	num=Math.floor(Math.random() * 2) + 1
+	console.log(num)
+	file = "audio"+String(num)
+	var audioElement = document.getElementById(file);
 	audioElement.play();
 }
 
