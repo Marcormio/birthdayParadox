@@ -50,6 +50,14 @@ p { color: #000;
 	left: 20%;
 }
 
+.mariahover{
+	border: solid 1px transparent;	
+}
+
+.mariahover:hover{
+	border-color: black;
+}
+
 .bgimg {
 	margin: auto;
 	min-width: 100%;
