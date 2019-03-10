@@ -51,11 +51,14 @@ p { color: #000;
 }
 
 .mariahover{
-	border: solid 1px transparent;	
-}
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;}
 
 .mariahover:hover{
-	border-color: black;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
 }
 
 .bgimg {
